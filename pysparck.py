@@ -14,9 +14,9 @@ df.show()
 df.summary().show()
 # Consulta: Filtrar por valor asignado y seleccionar columnas
 print("Subsidios con valor mayor a 100000000\n")
-dias = df.filter(F.col('valor asignado') > 5000).select('departamento','municipio','programa','valor asignado')
+dias = df.filter(F.col('Valor Asignado') > 10000000).select('Departamento', 'Municipio', 'Programa', 'Valor Asignado')
 dias.show()
-# Ordenar filas por los valores en la columna "a_o_de_asignaci_n" en orden descendente
+# Ordenar filas por los valores en la columna "valor asignado" en orden descendente
 print("Valores ordenados de mayor a menor subsidio")
-sorted_df = df.sort(F.col("valor asignado").desc())
+sorted_df = df.sort(F.col("Valor Asignado").desc())
 sorted_df.show()
