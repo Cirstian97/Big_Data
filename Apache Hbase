@@ -183,3 +183,11 @@ except Exception as e:
 finally:
     # Cerrar la conexión
     connection.close()
+
+EXPLICACIÓN DEL CODIGO
+
+Este código en Python establece una conexión con HBase y crea una tabla llamada used_cars con familias de columnas para almacenar información básica, especificaciones técnicas, datos de ventas y el estado del vehículo. Primero, verifica si la tabla ya existe y la elimina si es necesario, luego crea una nueva tabla. A continuación, carga datos de un archivo CSV (Car_details_v3.csv) que contiene detalles de coches usados y los inserta en la tabla, organizando los datos en las familias de columnas correspondientes.
+
+El código también realiza varias consultas y análisis sobre los datos almacenados. Muestra los primeros tres coches en la base de datos, encuentra coches con un precio menor a 50,000, cuenta coches por tipo de propietario, calcula el precio promedio por tipo de combustible y transmisión, lista los tres coches con mayor kilometraje, actualiza el precio de un coche específico, encuentra los tres coches más baratos por tipo de combustible, y calcula el kilometraje promedio por tipo de vendedor.
+
+Finalmente, maneja cualquier excepción que pueda ocurrir durante la ejecución y cierra la conexión con HBase al finalizar. Este proceso permite gestionar y analizar eficientemente grandes volúmenes de datos de coches usados utilizando HBase y Python.
